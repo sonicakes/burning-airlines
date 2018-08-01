@@ -15,5 +15,12 @@
   <%= @plane.columns %>
 </p>
 
-<%= link_to 'Edit', edit_plane_path(@plane) %> |
+
+
 <%= link_to 'Back', planes_path %>
+
+<% if @current_user.present? && @current_user.admin? %>
+<div class="controls">
+<%= link_to 'Edit', edit_plane_path(@plane) %> |
+</div>
+<% end %>
