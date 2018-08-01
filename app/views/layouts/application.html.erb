@@ -13,7 +13,7 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-sm navbar-dark text-white bg-dark" style="background-color: #228B22!important;">
+    <nav class="navbar navbar-expand-sm navbar-dark text-white bg-dark" style="background-color: #13433E!important;">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -33,7 +33,7 @@
         <ul class="navbar-nav">
           <% if @current_user.present? %>
             <li class="nav-item">
-              <%= link_to "Log out #{ @current_user.name }", session_new_path, :method => 'delete', class: "nav-link" %>
+              <%= link_to "Log out #{ @current_user.name }", login_path, :method => 'delete', class: "nav-link" %>
 
 
             </li>
@@ -44,7 +44,7 @@
               <% end %>
             </li>
             <li class="nav-item">
-              <%= link_to session_new_path, class: "nav-link text-white" do %>
+              <%= link_to login_path, class: "nav-link text-white" do %>
                 <i class="fas fa-sign-in-alt"></i> Log In
               <% end %>
             </li>
@@ -75,7 +75,7 @@
       </div>
     </div>
     <%= yield %>
-    <div class="footer fixed-bottom mt-4 p-2 bg-dark text-white text-center" style="background-color:#000066 !important;">
+    <div class="footer fixed-bottom mt-4 p-2 bg-dark text-white text-center" style="background-color:#13433E !important;">
       Copyright @sonicakes 2018
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>

@@ -1,6 +1,6 @@
 User.destroy_all
-u1 = User.create :name => mikea, :password => 'chicken', :admin => true
-u2 = User.create :name => soniap, :password => 'chicken'
+u1 = User.create(name: "mikea", password: 'chicken', admin: true)
+u2 = User.create(name: "soniap", password: 'chicken')
 
 
 Plane.destroy_all
