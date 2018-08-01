@@ -544,9 +544,9 @@ Processing by PlanesController#show as HTML
 Completed 404 Not Found in 24ms (ActiveRecord: 8.6ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find Plane with 'id'=2):
-  
+
 app/controllers/planes_controller.rb:67:in `set_plane'
 Started GET "/" for 127.0.0.1 at 2018-08-01 10:38:07 +1000
 Processing by Rails::WelcomeController#index as HTML
@@ -879,10 +879,10 @@ Completed 200 OK in 50ms (Views: 43.9ms | ActiveRecord: 0.6ms)
 
 
 Started GET "/" for 127.0.0.1 at 2018-08-01 10:52:15 +1000
-  
+
 ActiveRecord::NoDatabaseError (FATAL:  database "server_airlines_development" does not exist
 ):
-  
+
 activerecord (5.2.0) lib/active_record/connection_adapters/postgresql_adapter.rb:688:in `rescue in connect'
 activerecord (5.2.0) lib/active_record/connection_adapters/postgresql_adapter.rb:683:in `connect'
 activerecord (5.2.0) lib/active_record/connection_adapters/postgresql_adapter.rb:215:in `initialize'

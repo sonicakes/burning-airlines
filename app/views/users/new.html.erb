@@ -1,5 +1,45 @@
-<h1>New User</h1>
+<%= form_for @user do |f| %>
+  <div class="container">
+    <div class="row ">
+      <div class="col-12 col-md-6 mx-auto">
+        <h1 class="text-dark">Sign Up</h1>
+      </div>
+    </div>
 
-<%= render 'form', user: @user %>
+      <% if @user.errors.any? %>
+        <div class="row ">
+          <div class="col-12 col-md-6 mx-auto">
+          <% @user.errors.full_messages.each do |msg| %>
+            <p class="alert alert-warning"><%= msg %></li>
+          <% end %>
+          </div>
+        </div>
+      <% end %>
 
-<%= link_to 'Back', users_path %>
+
+      <div class="row">
+        <div class="col-12 col-md-6 mx-auto text-dark">
+          <%= f.label(:name, "User Name")%>
+          <%= f.text_field :name, class: "form-control" %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-6 mx-auto text-dark">
+          <%= f.label :password %>
+          <%= f.password_field :password, class: "form-control" %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-6 mx-auto text-dark">
+          <%= f.label :password_confirmation %>
+          <%= f.password_field :password_confirmation, class: "form-control" %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-6 mx-auto py-2">
+          <%= f.button '<i class="fas fa-user-plus"></i> Sign Up!'.html_safe, class: "btn btn-dark btn-block " %>
+
+        </div>
+      </div>
+  </div>
+<% end %>
