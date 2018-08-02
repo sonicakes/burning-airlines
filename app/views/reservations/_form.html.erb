@@ -12,14 +12,26 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :flight_id %>
-    <%= form.number_field :flight_id %>
+    <%= form.label :Name %>
+    <%= form.text_field :name %>
   </div>
 
   <div class="field">
-    <%= form.label :user_id %>
-    <%= form.number_field :user_id %>
+    <%= form.label :flight_id %>
+    <%= select_tag :flight_id, options_for_select(Flight.pluck(:flight_number, :id)) %>
   </div>
+
+  <div class="field">
+    <%= form.label :Origin %>
+    <%= select_tag :origin, options_for_select(Flight.pluck(:origin, :id)) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Destination %>
+    <%= select_tag :destination, options_for_select(Flight.pluck(:destination, :id)) %>
+  </div>
+
+
 
   <div class="field">
     <%= form.label :reserved %>
